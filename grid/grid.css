@@ -1,0 +1,190 @@
+*{
+  margin: 0; padding: 0;
+}
+
+
+
+
+
+header{
+  z-index: 999;
+  position: absolute;
+
+  margin-left: 2%;
+  animation: long 5s infinite linear;
+}
+
+header a{
+  font-size: 20px;
+  color: #fff;
+text-decoration: none;
+font-family: 'Nanum Myeongjo', serif;
+
+}
+
+
+@keyframes long {
+  0%{
+    top:2%;
+    opacity: 1;
+  }
+  50%{
+    top:1%;
+    opacity: 0.5;
+  }
+  100%{ 
+    top:2%;
+    opacity: 1;
+  }
+}
+.gridHome{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+}
+
+
+
+.grids{
+  padding: 10px;
+  width: auto;
+  height: 80%;
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 150px 150px 150px 150px;
+  grid-gap: 10px;
+  grid-template-areas: 
+  'a a a'
+  'b c c'
+  'b d e'
+  'f g e'
+  ;
+  transition: all ease-in-out 0.5s;
+} 
+
+.grid{
+  position: relative;
+  z-index: 1;
+  transition: 1s;
+  background-color: black;
+}
+
+.item1{
+  grid-area: a;
+}
+
+.item2{
+  grid-area: b;
+}
+.item3{
+  grid-area: c;
+}
+.item4{
+  grid-area: d;
+}
+.item5{
+  grid-area: e;
+}
+.item6{
+  grid-area: f;
+}
+.item7{
+  grid-area: g;
+}
+
+
+.grid img{
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: 1s all;
+}
+
+
+
+.grid img:hover{
+
+  opacity: 1;
+}
+
+
+.imgbtn{
+  cursor: pointer;
+  transition: 2s all;
+  opacity: 0;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right : 3px;
+  bottom: 3px;
+  border:0;
+  background-color: transparent;
+}
+
+.fa-solid{
+  color: rgb(218, 218, 218);
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+  transition: 0.5s;
+}
+
+.imgbtn:hover .fa-solid{
+
+  font-size: 27px;
+  color: white;
+}
+
+
+
+.gridImg{
+  transition: opacity 2s;
+  opacity: 0;
+  position: absolute;
+  width: 90%;
+  height: auto;
+}
+
+.gridImg img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.hid{
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.hid a{
+  text-decoration: none;
+  font-family: 'Nanum Myeongjo', serif;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  color: rgb(31, 31, 31);
+  border: 0;
+  background-color: transparent;
+  transition: 3s all;
+}
+
+
+
+.hid a:hover{
+  cursor: pointer;
+  color: white;
+}
